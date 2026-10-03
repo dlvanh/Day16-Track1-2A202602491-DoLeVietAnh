@@ -87,12 +87,17 @@
   - Changelog 09/2026 ghi rõ Rollouts "chưa tự merge hay rollback hôm nay" và tích hợp feature flag "sắp có", tức đây là bước tiếp theo đã lộ ra ([Changelog](https://cursor.com/changelog/rollouts-and-security-reviewer)).
 
 **Dự đoán 2** *(loại: mở rộng segment)*
-- **Dự đoán:** Cursor sẽ ra một loại seat riêng, rẻ hơn, cho người không phải engineer trong tài khoản doanh nghiệp (designer, PM, analyst, ops). Seat này chỉ gồm cloud agent, preview và publish; mọi thay đổi vào codebase chính phải có engineer duyệt PR. Cursor sẽ không đi cạnh tranh trực diện với Lovable/v0 ở thị trường cá nhân.
+- **Dự đoán:** Cursor vẫn giữ lõi là một editor kiểu VS Code cho developer, dùng cho cả dự án cá nhân lẫn dự án công việc. Song song đó, Cursor sẽ rẽ thêm sang người **non-tech** làm việc tri thức như marketing và research. Những người này dùng agent của Cursor cho việc của chính họ, không phải để viết code: soạn nội dung chiến dịch, tổng hợp tài liệu, làm báo cáo, dựng một công cụ nhỏ cho riêng mình. Hướng đi giống cách Anthropic đưa Claude từ công cụ cho dev thành agent làm việc chung cho mọi người.
 - **Lập luận:**
-  - Tệp mới nổi ở §2 (Grab: designer, PM, analyst, cả văn phòng CEO đều đang dùng) đã có thật nhưng đang dùng seat của engineer.
-  - M7 làm giao diện không còn bắt người dùng đọc từng file.
-  - Changelog 08/2026 đã có "Start from scratch" và publish qua Vercel.
-  - Bán thêm seat trong tài khoản doanh nghiệp sẵn có (land & expand) khớp với dịch chuyển người mua sang tổ chức ở §2. Thị trường cá nhân lại là nơi lực Habit yếu và pricing từng gây khủng hoảng (M4).
+  - **Vì sao vẫn giữ lõi cho dev:** M7 (Cursor 3) xây giao diện agent mới nhưng vẫn giữ nguyên IDE, vì tệp dev là nguồn doanh thu lõi và thói quen của họ (Habit) không thể phá.
+  - **Tệp non-tech đã xuất hiện, và việc họ làm không chỉ là code:** ở Grab, PM dùng Cursor chủ yếu để viết tài liệu, analyst viết SQL, văn phòng CEO "biến ý tưởng thành công cụ" ([Cursor × Grab](https://cursor.com/blog/grab)). Basis dùng Cursor để xây agent kế toán chạy dài hơi.
+  - **Hạ tầng đã sẵn sàng cho người không code:**
+    - Tính năng "Start from scratch" (08/2026) không cần repo.
+    - Projects (09/2026) có agent điều phối, nhớ bối cảnh qua nhiều tháng, nghe Slack và chạy theo lịch mà không cần ai nhắc.
+    - Grok Bot đã có trên thanh điều hướng của Cursor.
+    - Những thứ này đều không đòi người dùng đọc code.
+  - **Logic kinh tế:** sau M8, Cursor có model và compute riêng, nên phục vụ thêm việc không phải code tốn rất ít chi phí biên, và mở ra một tệp lớn hơn nhiều so với số developer.
+  - **Trải nghiệm của tôi ở §2:** rào cản lớn nhất với Cursor là làm quen tư duy AI-first, chứ không phải kỹ năng code. Người non-tech vượt qua được rào cản đó thì cũng dùng được Cursor.
 
 **Dự đoán 3** *(loại: đe doạ Big Tech / mô hình kiếm tiền)*
 - **Dự đoán:** Model nhà (Composer/Grok) sẽ thành mặc định trong Auto/Cursor Router và rẻ hơn rõ rệt hoặc nằm sẵn trong gói. Model Claude/GPT thành lựa chọn tính phí cao hơn. Trong vòng 12 tháng, ít nhất một trong Anthropic/OpenAI sẽ siết điều khoản với Cursor (rate limit, giá, hoặc model mới lên Cursor chậm hơn). Cursor phản ứng bằng cách nhấn mạnh "vẫn đa model" với khách enterprise, nhưng kéo dần lưu lượng về model nhà.
@@ -118,5 +123,5 @@ Công cụ AI đã dùng: **Claude (Anthropic)** với web search và đọc tra
 | Kiểm chứng link nguồn của 8 mốc | **AI** mở lần lượt 8 bài gốc trên blog/changelog Cursor và TechCrunch, đối chiếu ngày và nội dung | Link CNBC về thương vụ SpaceX bị lỗi 403 nên đã thay bằng blog Cursor + Bloomberg. Tôi đã tự mở lại cả 8 link nguồn ở §1 để xác nhận. |
 | Viết cột Context và Nguyên lý ở §1 | **AI viết nháp** | Vài chi tiết context là kiến thức nền của AI, chưa gắn nguồn: GPT-4 ra 03/2023, Claude 3.5 Sonnet giỏi tool use. _[Bạn đối chiếu tên nguyên lý với slide buổi học]_ |
 | Tệp user, JTBD, 4 forces ở §2 | **AI tổng hợp** từ case study Grab và 2 bài "why I switched"; **tôi bổ sung trải nghiệm dùng thật** | Persona early adopter là **suy luận** từ TechCrunch 2023; AI chưa đọc trực tiếp review 2023. Tôi đối chiếu phần 4 forces với trải nghiệm của chính mình (ghi ở §2): lúc đầu khó dùng vì chưa quen cách làm AI-first, sau 1–2 tháng thì quen. Điều này khớp với nhận định lực Habit hình thành dần rồi giữ chân user. |
-| 3 dự đoán và giả định ở §3 | **AI viết nháp** từ §1–§2 và changelog Origin/Rollouts | AI mở bài SiliconANGLE về Origin và changelog Rollouts để chắc các mảnh đã ra mắt. _[Bạn ghi: dự đoán nào bạn đồng ý / sửa lại]_ |
+| 3 dự đoán và giả định ở §3 | **AI viết nháp** từ §1–§2 và changelog Origin/Rollouts | AI mở bài SiliconANGLE về Origin và changelog Rollouts để chắc các mảnh đã ra mắt. Tôi đồng ý với Dự đoán 1 và 3. **Dự đoán 2 là quan điểm của tôi:** AI đề xuất "seat cho non-engineer trong doanh nghiệp, vẫn xoay quanh code"; tôi sửa thành "giữ lõi dev kiểu VS Code + rẽ sang người non-tech làm marketing/research cho việc cá nhân, giống hướng của Claude". AI giúp tìm dữ liệu từ §1–§2 để làm lập luận cho quan điểm này. | |
 | Ghép memo theo template | **AI** | — |
