@@ -65,6 +65,11 @@
 | **Habit** (thói quen) | Giữ ở lại Cursor | Nhịp Tab-to-accept, diff trực quan, sửa nhỏ nhanh. Đây đúng là những gì người đã rời Cursor nói họ còn nhớ. |
 | **Anxiety** (nỗi lo khi đổi) | Giữ ở lại: **yếu với cá nhân, mạnh với doanh nghiệp** | Cá nhân: Cursor là fork VS Code nên rời đi cũng dễ như lúc vào ("không có learning curve", Miessler), và code nằm trong git chứ không nằm trong Cursor. Doanh nghiệp: rule của team, hooks, Bugbot/Graphite trong quy trình PR, security review, hợp đồng mua sắm. |
 
+**Trải nghiệm dùng thật của tôi:**
+- Khi mới tải về, Cursor khá khó dùng vì tôi chưa quen cách làm việc AI-first. Đây là lực **Anxiety/Habit cũ** cản người mới.
+- Sau 1–2 tháng tôi đã quen với tư duy AI-first. Đó là lúc lực **Habit** chuyển phe, từ cản trở thành giữ chân.
+- Càng về sau, Cursor càng có nhiều model mạnh, khiến năng suất của tôi tăng lên. Đây là lực **Pull**, nhưng nó gắn với *model* nhiều hơn là với Cursor. Vì vậy nếu model tốt nhất có ở nơi khác, lực này cũng có thể kéo tôi đi (khớp với Dự đoán 3).
+
 **Lực giữ user mạnh nhất:**
 - **Với dev cá nhân là Habit (nhịp Tab).** Khi agent viết gần hết code (chính Cursor 3 thừa nhận xu hướng này), lực Habit sẽ biến mất. Lúc đó dev cá nhân sẽ đi theo agent nào rẻ hơn hoặc mạnh hơn, và Cursor trở lại vị thế wrapper.
 - **Với doanh nghiệp là Anxiety (workflow đã cắm sâu).**
@@ -109,9 +114,9 @@ Công cụ AI đã dùng: **Claude (Anthropic)** với web search và đọc tra
 |---|---|---|
 | Chọn sản phẩm | **Bạn chọn.** AI đưa 4 gợi ý (Cursor, Perplexity, Notion AI, Duolingo). | Bạn chọn Cursor. AI kiểm tra 3 tiêu chí CP0 (changelog có phân trang, có trang Product Hunt, có báo chí về các lần ra mắt). |
 | Thu thập nguồn và lập danh sách 34 mốc ứng viên | **AI** (web search, mở changelog, blog Cursor, Product Hunt) | AI đánh dấu các mốc chỉ có nguồn thứ cấp và phát hiện 4 chỗ số liệu lệch giữa các nguồn (ngày/số tiền Series A–C, ARR lúc SpaceX mua). Vì vậy memo không dùng số liệu gọi vốn làm mốc. |
-| Chọn 8 mốc và lý do loại các mốc khác | **AI đề xuất, bạn duyệt** | _[Bạn ghi: đồng ý toàn bộ / sửa mốc nào, vì sao]_ |
+| Chọn 8 mốc và lý do loại các mốc khác | **AI đề xuất, tôi duyệt** | Tôi đồng ý với 8 mốc vì đây là 8 lần thay đổi rõ rệt nhất của Cursor trên hành trình từ một bản fork của VS Code do 5 người phát triển đến khi được SpaceX mua lại với giá $60B. |
 | Kiểm chứng link nguồn của 8 mốc | **AI** mở lần lượt 8 bài gốc trên blog/changelog Cursor và TechCrunch, đối chiếu ngày và nội dung | Link CNBC về thương vụ SpaceX bị lỗi 403 nên đã thay bằng blog Cursor + Bloomberg. _[Bạn tự mở lại 8 link trước khi nộp]_ |
 | Viết cột Context và Nguyên lý ở §1 | **AI viết nháp** | Vài chi tiết context là kiến thức nền của AI, chưa gắn nguồn: GPT-4 ra 03/2023, Claude 3.5 Sonnet giỏi tool use. _[Bạn đối chiếu tên nguyên lý với slide buổi học]_ |
-| Tệp user, JTBD, 4 forces ở §2 | **AI tổng hợp** từ case study Grab và 2 bài "why I switched" | Persona early adopter là **suy luận** từ TechCrunch 2023; AI chưa đọc trực tiếp review 2023. _[Bạn kiểm tra bằng cách dùng free tier hoặc đọc review 1–2 sao]_ |
+| Tệp user, JTBD, 4 forces ở §2 | **AI tổng hợp** từ case study Grab và 2 bài "why I switched"; **tôi bổ sung trải nghiệm dùng thật** | Persona early adopter là **suy luận** từ TechCrunch 2023; AI chưa đọc trực tiếp review 2023. Tôi đối chiếu phần 4 forces với trải nghiệm của chính mình (ghi ở §2): lúc đầu khó dùng vì chưa quen cách làm AI-first, sau 1–2 tháng thì quen. Điều này khớp với nhận định lực Habit hình thành dần rồi giữ chân user. |
 | 3 dự đoán và giả định ở §3 | **AI viết nháp** từ §1–§2 và changelog Origin/Rollouts | AI mở bài SiliconANGLE về Origin và changelog Rollouts để chắc các mảnh đã ra mắt. _[Bạn ghi: dự đoán nào bạn đồng ý / sửa lại]_ |
 | Ghép memo theo template | **AI** | — |
